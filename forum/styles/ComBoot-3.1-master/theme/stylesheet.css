@@ -1,0 +1,20 @@
+/*  phpBB3 Style Sheet
+    --------------------------------------------------------------
+	Style name:			ComBoot Free
+	Based on style:		
+	Original author:	Tom Beddard ( http://www.subblue.com/ )
+	Modified by:		phpBB Group ( http://www.phpbb.com/ )
+	Customised by:		Florian Gareis ( http://www.florian-gareis.de/ )
+	Version:			1.1
+	Notes:				Compiled with less (original file: /comboot/comboot.less)
+    --------------------------------------------------------------
+*/
+
+@import url("imageset.css");
+@import url("comboot/comboot.css");
+
+body, tr, .panel-body, .display-options {
+	background-color: #242424 !important;
+	color: whitesmoke !important;
+}
+

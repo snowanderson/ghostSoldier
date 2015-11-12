@@ -1,0 +1,29 @@
+<div class="jumpbox row">
+	<div class="col-md-6">
+		<!-- IF S_VIEWTOPIC -->
+			<a href="{U_VIEW_FORUM}" class="btn btn-default" accesskey="r">{L_RETURN_TO_FORUM}</a>
+		<!-- ELSEIF S_VIEWFORUM -->
+			<a href="{U_INDEX}" class="btn btn-default" accesskey="r">{L_RETURN_TO_INDEX}</a>
+		<!-- ELSEIF SEARCH_TOPIC -->
+			<a class="btn btn-default" href="{U_SEARCH_TOPIC}" accesskey="r">{L_RETURN_TO_TOPIC}</a>
+		<!-- ELSEIF S_SEARCH_ACTION -->
+			<a class="btn btn-default" href="{U_SEARCH}" title="{L_SEARCH_ADV}" accesskey="r">{L_GO_TO_SEARCH_ADV}</a>
+		<!-- ENDIF -->
+	</div>
+	<!-- IF S_DISPLAY_JUMPBOX -->
+		<div class="col-md-6">
+			<div class="btn-group pull-right">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF -->" >
+					<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF --> <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<!-- BEGIN jumpbox_forums -->
+						<!-- IF jumpbox_forums.FORUM_ID neq -1 -->
+							<li><a href="{jumpbox_forums.LINK}"><!-- BEGIN level -->&nbsp; &nbsp;<!-- END level -->{jumpbox_forums.FORUM_NAME}</a></li>
+						<!-- ENDIF -->
+					<!-- END jumpbox_forums -->
+				</ul>
+			</div>
+		</div>
+	<!-- ENDIF -->
+</div>

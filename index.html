@@ -1,48 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="foundation/css/foundation.css" />
-    <script src="foundation/js/vendor/modernizr.js"></script>
-</head>
-<body>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/foundation/js/vendor/modernizr.js"></script>
+      <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
+  </head>
+  <body>
 
     <div class="fixed">
       <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="name">
-                <h1><a href="#">Ghost Soldier Airsoft</a></h1>
+                <h1><a href="#"><img src="images/logo.png" width="100" alt=""></a></h1>
             </li>
             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
-
+    
         <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-                <li class="active"><a href="#">Right Button Active</a></li>
-                <li class="has-dropdown">
-                    <a href="#">Right Button Dropdown</a>
-                    <ul class="dropdown">
-                        <li><a href="#">First link in dropdown</a></li>
-                        <li class="active"><a href="#">Active link in dropdown</a></li>
-                    </ul>
-                </li>
+                <li class="active"><a href="#"><i class="fa fa-facebook-official"></i></a></li>
             </ul>
-
+    
             <!-- Left Nav Section -->
             <ul class="left">
-                <li><a href="#">Left Nav Button</a></li>
+                <li><a class="active" href="#">ACCUEIL</a></li>
+                <li><a href="#">FORUM</a></li>
+                <li><a href="#">L'ASSOCIATION</a></li>
+                <li><a href="#">MEDIAS</a></li>
+                <li><a href="#">ACHATS ET LOCATIONS</a></li>
             </ul>
         </section>
       </nav>
     </div>
 
-    <script src="foundation/js/vendor/jquery.js"></script>
-    <script src="foundation/js/foundation.min.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
-</body>
+    <div class="content">
+
+        <div class="row">
+            <div class="large-12 columns">
+                <!-- Content goes Here -->
+                <div class="panel">
+                    My first content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa debitis dolore
+                    eius eos excepturi explicabo facilis id iste laudantium, magni minima molestias necessitatibus neque
+                    officia perspiciatis porro saepe sed sequi.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet architecto blanditiis,
+                    consequatur cupiditate deserunt dicta, earum fugit ipsam magnam maiores necessitatibus nostrum
+                    officiis perferendis placeat repellat ut? Ipsum, minima.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem dolore, dolores et id in,
+                    iste maiores molestias mollitia neque sequi suscipit veritatis. Accusantium aspernatur ea est, iusto
+                    officiis voluptates.
+                </div>
+            </div>
+            ADDlarge-column-item
+        </div><!-- ADDsmall-column-item ** ADDmedium-column-item ** ADDlarge-column-item ** ADDsmall-medium-large-column-item ** End Row  -->
+    </div>
+    <div id="root">
+        <div id="root_footer"></div>
+    </div>
+    <div id="footer">
+        Footer content goes here.
+    </div>
+
+    <script src="bower_components/foundation/js/vendor/jquery.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

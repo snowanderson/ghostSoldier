@@ -1,0 +1,51 @@
+// The latest settings can be found here:
+// https://github.com/zurb/bower-foundation/blob/master/scss/foundation/_settings.scss
+
+// Variables
+// Background
+// Content
+// Top bar
+// Panel
+// Footer
+
+// Variables
+
+$first-color  : #232425;
+$second-color : #e8212e;
+$third-color  : #e58731;
+$fourth-color : #605f66;
+$fifth-color  : #e9eaec;
+
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
+
+// Background
+
+$body-bg : $first-color;
+$body-font-color : $fifth-color;
+$header-font-color: $fifth-color;
+$body-font-family: "Electrolize";
+
+// Content
+
+  .content {
+    margin-top: 100px;
+    }
+
+// Top bar
+
+$topbar-bg-color: $fourth-color;
+$topbar-link-bg-active: $third-color;
+$topbar-link-bg-active-hover: $second-color;
+
+
+// Panel
+
+$panel-bg: $fourth-color;
+
+// Footer
+
+@import "compass/layout/sticky-footer";
+@include sticky-footer(500px);
+#footer {
+  background: $fourth-color;
+  }

@@ -7,7 +7,6 @@
     <option name="importPaths">
       <list>
         <option value="/Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets" />
-        <option value="$MODULE_DIR$/bower_components/foundation/scss" />
       </list>
     </option>
   </component>

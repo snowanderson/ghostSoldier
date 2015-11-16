@@ -216,7 +216,7 @@ class __TwigTemplate_8564a5fac89d66703ebbdd45869cb2a3fdfa7e6cd0ecc2290a9c2b19bf6
         echo "/colours.css?assets_version=";
         echo (isset($context["T_ASSETS_VERSION"]) ? $context["T_ASSETS_VERSION"] : null);
         echo "\" rel=\"stylesheet\" type=\"text/css\" media=\"screen, projection\" />
-
+\t<link rel=\"stylesheet\" href=\"http://yui.yahooapis.com/pure/0.6.0/pure-min.css\">
 ";
         // line 48
         $previous_look_up_order = $this->env->getNamespaceLookUpOrder();

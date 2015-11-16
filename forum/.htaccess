@@ -1,6 +1,8 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
+DirectoryIndex aboutus.php index.php index.html index.htm
+
 #
 # Uncomment the statement below if you want to make use of
 # HTTP authentication and it does not already work.

@@ -1,35 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Electrolize);
-/* line 30, ../scss/_settings.scss */
+/* line 28, ../scss/_settings.scss */
+.content {
+  background: url("../images/grid.png") center fixed;
+  background-color: #232425;
+}
+
+/* line 36, ../scss/_settings.scss */
 .content {
   margin-top: 100px;
 }
 
-/* line 10, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 10, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
 html, body {
   height: 100%;
 }
 
-/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
 #root {
   clear: both;
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -500px;
+  margin-bottom: -100px;
 }
-/* line 18, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 18, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
 #root #root_footer {
-  height: 500px;
+  height: 100px;
 }
 
-/* line 20, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 20, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
 #footer {
   clear: both;
   position: relative;
-  height: 500px;
+  height: 100px;
 }
 
-/* line 49, ../scss/_settings.scss */
+/* line 55, ../scss/_settings.scss */
 #footer {
   background: #605f66;
 }

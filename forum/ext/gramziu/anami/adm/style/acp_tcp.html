@@ -1,0 +1,227 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+	<h1>{L_ACP_TCP}</h1>
+
+	<p>{L_ACP_TCP_DESCRIPTION}</p>
+
+<!-- IF S_MAIN -->
+
+	<form id="acp_tcp" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_ACP_TCP_MAIN}</legend>
+	<dl> 
+		<dt><label for="anami_width">{L_ACP_TCP_WIDTH}:</label></dt>
+		<dd><input type="text" value="{ANAMI_WIDTH}" name="anami_width" maxlength="7" size="5" /></dd>
+	</dl>
+	<dl> 
+		<dt><label for="anami_layout">{L_ACP_TCP_LAYOUT}:</label></dt>
+		<dd><label><input type="radio" class="radio" name="anami_layout" value="0"<!-- IF ANAMI_LAYOUT eq 0 --> checked="checked"<!-- ENDIF --> /> {L_ACP_TCP_WIDE}</label>
+			<label><input type="radio" class="radio" name="anami_layout" value="1"<!-- IF ANAMI_LAYOUT eq 1 --> checked="checked"<!-- ENDIF --> /> {L_ACP_TCP_BOXED_DARK}</label>
+			<label><input type="radio" class="radio" name="anami_layout" value="2"<!-- IF ANAMI_LAYOUT eq 2 --> checked="checked"<!-- ENDIF --> /> {L_ACP_TCP_BOXED_BRIGHT}</label></dd>
+	</dl>
+	<dl> 
+		<dt><label for="anami_header">{L_ACP_TCP_HEADER}:</label></dt>
+		<dd><label><input type="radio" class="radio" name="anami_header" value="0"<!-- IF ANAMI_HEADER eq 0 --> checked="checked"<!-- ENDIF --> /> {L_ACP_TCP_HEADER_BIG}</label>
+			<label><input type="radio" class="radio" name="anami_header" value="1"<!-- IF ANAMI_HEADER eq 1 --> checked="checked"<!-- ENDIF --> /> {L_ACP_TCP_HEADER_SMALL}</label></dd>
+	</dl>
+	<dl> 
+		<dt><label for="anami_font">{L_ACP_TCP_FONT}:</label></dt>
+		<dd><input type="text" value="{ANAMI_FONT}" name="anami_font" maxlength="48" size="12" /></dd>
+	</dl>
+	<dl> 
+		<dt><label for="anami_cm">{L_ACP_TCP_CM}:</label></dt>
+		<dd><input type="text" value="{ANAMI_CM}" name="anami_cm" maxlength="7" size="6" />&nbsp;<span style="background-color: {ANAMI_CM}">&nbsp; &nbsp;</span></dd>
+	</dl>
+	<dl> 
+		<dt><label for="anami_ct">{L_ACP_TCP_CT}:</label></dt>
+		<dd><input type="text" value="{ANAMI_CT}" name="anami_ct" maxlength="7" size="6" />&nbsp;<span style="background-color: {ANAMI_CT}">&nbsp; &nbsp;</span></dd>
+	</dl>
+	<dl> 
+		<dt><label for="anami_cl">{L_ACP_TCP_CL}:</label></dt>
+		<dd><input type="text" value="{ANAMI_CL}" name="anami_cl" maxlength="7" size="6" />&nbsp;<span style="background-color: {ANAMI_CL}">&nbsp; &nbsp;</span></dd>
+	</dl>
+	<dl> 
+		<dt><label for="anami_cl_h">{L_ACP_TCP_CL_H}:</label></dt>
+		<dd><input type="text" value="{ANAMI_CL_H}" name="anami_cl_h" maxlength="7" size="6" />&nbsp;<span style="background-color: {ANAMI_CL_H}">&nbsp; &nbsp;</span></dd>
+	</dl>
+	<dl> 
+		<dt><label for="anami_cb">{L_ACP_TCP_CB}:</label></dt>
+		<dd><input type="text" value="{ANAMI_CB}" name="anami_cb" maxlength="7" size="6" />&nbsp;<span style="background-color: {ANAMI_CB}">&nbsp; &nbsp;</span></dd>
+	</dl>
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+
+	</form>
+
+<!-- ELSEIF S_SIDEBAR -->
+
+	<form id="acp_tcp" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_ACP_TCP_MAIN}</legend>
+	<dl> 
+		<dt><label for="anami_sidebar">{L_ACP_TCP_SIDEBAR_BLOCKS}:</label></dt>
+		<dd><label><input type="radio" class="radio" name="anami_sidebar" value="1"<!-- IF ANAMI_SIDEBAR eq 1 --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="anami_sidebar" value="0"<!-- IF ANAMI_SIDEBAR eq 0 --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+	</dl>
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+
+	</form>
+
+<!-- BEGIN siba -->
+	<form id="acp_tcp" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{siba.SIDEBAR_NAME}</legend>
+	<dl>
+		<dt><label for="sidebar_name">{L_ACP_TCP_SIDEBAR_BLOCK}:</label></dt>
+		<dd><input class="text medium" type="text" value="{siba.SIDEBAR_NAME}" name="sidebar_name" maxlength="70" size="5" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="sidebar_content">{L_ACP_TCP_SIDEBAR_BLOCK_CONTENT}:</label></dt>
+		<dd><textarea name="sidebar_content" rows="15" cols="45">{siba.SIDEBAR_CONTENT}</textarea></dd>
+	</dl>
+	<input type="hidden" value="{siba.SIDEBAR_POSITION}" name="sidebar_position" />
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />&nbsp;
+		<input class="button1" type="submit" id="submit" name="delete" value="Delete" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+	</form>
+<!-- END siba -->
+
+<form id="acp_tcp" method="post" action="{U_ACTION}">
+	<fieldset>
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="add" value="Add" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- ELSEIF S_FOOTER_BLOCKS -->
+
+	<form id="acp_tcp" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_ACP_TCP_MAIN}</legend>
+	<dl> 
+		<dt><label for="anami_footer">{L_ACP_TCP_FOOTER_BLOCKS}:</label></dt>
+		<dd><label><input type="radio" class="radio" name="anami_footer" value="1"<!-- IF ANAMI_FOOTER eq 1 --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="anami_footer" value="0"<!-- IF ANAMI_FOOTER eq 0 --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+	</dl>
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+
+	</form>
+
+<!-- BEGIN fubl -->
+	<form id="acp_tcp" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{fubl.FOOTER_NAME}</legend>
+	<dl>
+		<dt><label for="footer_name">{L_ACP_TCP_FOOTER_BLOCK}:</label></dt>
+		<dd><input class="text medium" type="text" name="footer_name" value="{fubl.FOOTER_NAME}" maxlength="255" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="footer_content">{L_ACP_TCP_FOOTER_BLOCK_CONTENT}:</label></dt>
+		<dd><textarea name="footer_content" rows="15" cols="45">{fubl.FOOTER_CONTENT}</textarea></dd>
+	</dl>
+	<input type="hidden" value="{fubl.FOOTER_POSITION}" name="footer_position" />
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+	</form>
+<!-- END fubl -->
+
+<!-- ELSEIF S_SOCIAL_ICONS -->
+
+<!-- BEGIN soic -->
+	<form id="acp_tcp" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{soic.SI_POSITION}</legend>
+	<dl>
+		<dt><label for="social_icon">{L_ACP_TCP_SOCIAL_ICON_IMAGE}:</label></dt>
+		<dd><input class="text medium" type="text" value="{soic.SOCIAL_ICON}" name="social_icon" maxlength="70" size="5" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="social_url">{L_ACP_TCP_SOCIAL_ICON_URL}:</label></dt>
+		<dd><input class="text medium" type="text" value="{soic.SOCIAL_URL}" name="social_url" maxlength="70" size="5" /></dd>
+	</dl>
+	<input type="hidden" value="{soic.SOCIAL_POSITION}" name="social_position" />
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />&nbsp;
+		<input class="button1" type="submit" id="submit" name="delete" value="Delete" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+	</form>
+<!-- END soic -->
+
+<form id="acp_tcp" method="post" action="{U_ACTION}">
+	<fieldset>
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="add" value="Add" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- ELSEIF S_MAIN_MENU -->
+
+<!-- BEGIN mame -->
+	<form id="acp_tcp" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{mame.MENU_POSITION}</legend>
+	<dl>
+		<dt><label for="menu_name">{L_ACP_TCP_MENU_NAME}:</label></dt>
+		<dd><input class="text medium" type="text" value="{mame.MENU_NAME}" name="menu_name" maxlength="70" size="5" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="menu_url">{L_ACP_TCP_MENU_URL}:</label></dt>
+		<dd><input class="text medium" type="text" value="{mame.MENU_URL}" name="menu_url" maxlength="70" size="5" /></dd>
+	</dl>
+	<input type="hidden" value="{mame.MENU_POSITION}" name="menu_position" />
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />&nbsp;
+		<input class="button1" type="submit" id="submit" name="delete" value="Delete" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+	</form>
+<!-- END mame -->
+
+<form id="acp_tcp" method="post" action="{U_ACTION}">
+	<fieldset>
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="add" value="Add" />
+	</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

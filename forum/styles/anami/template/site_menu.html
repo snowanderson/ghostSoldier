@@ -1,0 +1,11 @@
+<!-- IF U_SITE_HOME --><li class="site-menu"><a href="{U_INDEX}">{L_INDEX}</a></li><!-- ENDIF -->
+<!-- IF ANAMI_TCP -->
+	<!-- BEGIN mame -->
+		<li class="site-menu">
+			<a href="{mame.MENU_URL}">{mame.MENU_NAME}</a>
+		</li>
+	<!-- END mame -->
+<!-- ENDIF -->
+<!-- EVENT overall_header_navigation_prepend -->
+<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"<!-- ELSE -->data-last-responsive="true"<!-- ENDIF --> class="site-menu"><a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}">{L_FAQ}</a></li>
+<!-- EVENT overall_header_navigation_append -->

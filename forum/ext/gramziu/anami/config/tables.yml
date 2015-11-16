@@ -1,0 +1,5 @@
+parameters:
+    tables.anami_sidebar_table: %core.table_prefix%anami_sidebar
+    tables.anami_footer_table: %core.table_prefix%anami_footer
+    tables.anami_social_table: %core.table_prefix%anami_social
+    tables.anami_menu_table: %core.table_prefix%anami_menu

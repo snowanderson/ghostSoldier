@@ -1,0 +1,37 @@
+<div id="sidebar">
+
+	<div class="side-block">
+		<img src="{T_THEME_PATH}/images/rate_it.jpg" alt="Rate it" style="border-radius: 3px;">
+	</div>
+
+	<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+	<div class="side-block side-login">
+		<form method="post" action="{S_LOGIN_ACTION}">
+			<h4 class="side-block-head"><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a><!-- IF S_REGISTER_ENABLED -->&nbsp; &bull; &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF --></h4>
+			<div class="side-block-body">
+				<fieldset>
+					<input type="text" tabindex="1" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" placeholder="{L_USERNAME}" /><input type="password" tabindex="2" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" placeholder="{L_PASSWORD}" autocomplete="off" />
+					<br />
+					<!-- IF U_SEND_PASSWORD -->
+						<a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+					<!-- ENDIF -->
+					<!-- IF S_AUTOLOGIN_ENABLED -->
+						<label for="autologin" id="remember-me"><input type="checkbox" tabindex="4" name="autologin" id="autologin" />{L_LOG_ME_IN}</label>
+					<!-- ENDIF -->
+					<br />
+					<input type="submit" tabindex="5" name="login" value="{L_LOGIN}" class="button2" />
+					{S_LOGIN_REDIRECT}
+				</fieldset>
+			</div>
+		</form>
+	</div>
+	<!-- ENDIF -->
+
+	<div class="side-block">
+		<h4 class="side-block-head">Lorem ipsum</h4>
+		<div class="side-block-body">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+	</div>
+
+</div>

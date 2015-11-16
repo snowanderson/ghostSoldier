@@ -1,0 +1,132 @@
+		<!-- EVENT overall_footer_content_after -->
+
+	<!-- EVENT overall_footer_page_body_after -->
+
+<div id="wrap-footer">
+	<div id="site-footer">
+		<div class="chunk">
+
+			<div id="foot-left">
+				<ul class="site-footer-nav" role="menubar">
+					<!-- IF U_SITE_HOME --><li><a href="{U_SITE_HOME}" data-navbar-reference="home">{L_SITE_HOME}</a></li><!-- ENDIF -->
+					<li><a href="{U_INDEX}" data-navbar-reference="index">{L_INDEX}</a></li>
+					<!-- IF U_WATCH_FORUM_LINK and not S_IS_BOT --><li class="icon-<!-- IF S_WATCHING_FORUM -->unsubscribe<!-- ELSE -->subscribe<!-- ENDIF -->" data-last-responsive="true"><a href="{U_WATCH_FORUM_LINK}" title="{S_WATCH_FORUM_TITLE}" data-ajax="toggle_link" data-toggle-class="icon-<!-- IF not S_WATCHING_FORUM -->unsubscribe<!-- ELSE -->subscribe<!-- ENDIF -->" data-toggle-text="{S_WATCH_FORUM_TOGGLE}" data-toggle-url="{U_WATCH_FORUM_TOGGLE}">{S_WATCH_FORUM_TITLE}</a></li><!-- ENDIF -->
+					<!-- IF not S_IS_BOT -->
+						<li class="icon-delete-cookies"><a href="{U_DELETE_COOKIES}" data-ajax="true" data-refresh="true" role="menuitem">{L_DELETE_COOKIES}</a></li>
+						<!-- IF S_DISPLAY_MEMBERLIST --><li class="icon-members" data-last-responsive="true"><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}" role="menuitem">{L_MEMBERLIST}</a></li><!-- ENDIF -->
+					<!-- ENDIF -->
+					<!-- EVENT overall_footer_teamlink_before -->
+					<!-- IF U_TEAM --><li class="icon-team" data-last-responsive="true"><a href="{U_TEAM}" role="menuitem">{L_THE_TEAM}</a></li><!-- ENDIF -->
+					<!-- EVENT overall_footer_teamlink_after -->
+					<!-- IF U_CONTACT_US --><li class="icon-contact" data-last-responsive="true"><a href="{U_CONTACT_US}" role="menuitem">{L_CONTACT_US}</a></li><!-- ENDIF -->
+				</ul>
+
+				<!-- IF not ANAMI_TCP -->
+					<ul id="foot-social">
+						<li>
+							<a href="#">
+								<i class="fa fa-youtube-play"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-dropbox"></i>
+							</a>
+						</li>
+					</ul>
+				<!-- ELSE -->
+					<ul id="foot-social">
+						<!-- BEGIN soic -->
+							<li>
+								<a href="{soic.SOCIAL_URL}"><i class="fa {soic.SOCIAL_ICON}"></i></a>
+							</li>
+						<!-- END soic -->
+					</ul>
+				<!-- ENDIF -->
+			</div>
+
+			<div id="foot-center">
+				<a href="#phpbb">
+					<i class="fa fa-chevron-up"></i>
+				</a>
+			</div>
+
+			<div id="foot-right">
+				<ul>
+					<!-- EVENT overall_footer_timezone_before -->
+					<li>{S_TIMEZONE}</li>
+					<li>{CURRENT_TIME}</li>
+					<!-- EVENT overall_footer_timezone_after -->
+				</ul>
+			</div>
+
+
+
+
+			<div id="foot-copyright">
+				<!-- EVENT overall_footer_copyright_prepend -->
+				{CREDIT_LINE}
+				<br />Anami Theme by <a href="http://themeforest.net/user/Gramziu">Gramziu</a>
+				<!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->
+				<!-- EVENT overall_footer_copyright_append -->
+				<!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF -->
+			</div>
+		</div>
+	</div>
+
+	<div id="darkenwrapper" data-ajax-error-title="{L_AJAX_ERROR_TITLE}" data-ajax-error-text="{L_AJAX_ERROR_TEXT}" data-ajax-error-text-abort="{L_AJAX_ERROR_TEXT_ABORT}" data-ajax-error-text-timeout="{L_AJAX_ERROR_TEXT_TIMEOUT}" data-ajax-error-text-parsererror="{L_AJAX_ERROR_TEXT_PARSERERROR}">
+		<div id="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="{L_ERROR}" data-l-timeout-processing-req="{L_TIMEOUT_PROCESSING_REQ}">
+		<a href="#" class="alert_close"></a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close"></a>
+		<div class="alert_text"></div>
+	</div>
+
+	<div style="display: none;">
+		<a id="bottom" class="anchor" accesskey="z"></a>
+		<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+	</div>
+</div>
+
+<script type="text/javascript" src="{T_JQUERY_LINK}"></script>
+<!-- IF S_ALLOW_CDN --><script type="text/javascript">window.jQuery || document.write(unescape('%3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}" type="text/javascript"%3E%3C/script%3E'));</script><!-- ENDIF -->
+<script type="text/javascript" src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
+<!-- INCLUDEJS forum_fn.js -->
+<!-- INCLUDEJS ajax.js -->
+<!-- INCLUDEJS chosen.jquery.min.js -->
+
+<script>
+	$(function() {
+		$("#st, #sd, #sk, #ch").chosen({
+			disable_search: true,
+			width: "auto"
+		});
+	});
+</script>
+
+<!-- EVENT overall_footer_after -->
+
+<!-- IF S_PLUPLOAD --><!-- INCLUDE plupload.html --><!-- ENDIF -->
+{$SCRIPTS}
+
+<!-- EVENT overall_footer_body_after -->
+
+</div>
+
+</body>
+</html>

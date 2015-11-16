@@ -1,0 +1,63 @@
+<!-- INCLUDE overall_header.html -->
+
+<div id="wrap-subhead">
+	<div class="chunk">
+
+		<div id="subhead-title">
+			<h2>{L_SEND_PASSWORD}</h2>
+		</div>
+
+		<ul id="breadcrumbs" role="menubar">
+			<!-- DEFINE $MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' -->
+			<!-- EVENT overall_header_breadcrumbs_before -->
+			<li class="breadcrumbs rightside">
+				<!-- IF U_SITE_HOME --><span class="crumb"><a href="{U_SITE_HOME}"{$MICRODATA} data-navbar-reference="home">{L_SITE_HOME}</a></span><!-- ENDIF -->
+				<!-- EVENT overall_header_breadcrumb_prepend -->
+				<span class="crumb"><a href="{U_INDEX}" accesskey="h"{$MICRODATA} data-navbar-reference="index">{L_INDEX}</a></span>
+				<!-- BEGIN navlinks -->
+					<!-- EVENT overall_header_navlink_prepend -->
+					<span class="crumb"><a href="{navlinks.U_VIEW_FORUM}"{$MICRODATA}<!-- IF navlinks.MICRODATA --> {navlinks.MICRODATA}<!-- ENDIF -->>{navlinks.FORUM_NAME}</a></span>
+					<!-- EVENT overall_header_navlink_append -->
+				<!-- END navlinks -->
+				<!-- EVENT overall_header_breadcrumb_append -->
+			</li>
+			<!-- EVENT overall_header_breadcrumbs_after -->
+		</ul>
+
+	</div>
+</div>
+
+<div id="wrap-body">
+	<div class="chunk">
+
+		<form action="{S_PROFILE_ACTION}" method="post" id="remind">
+
+		<div class="panel">
+			<div class="inner">
+
+			<div class="content">
+				<fieldset>
+				<dl>
+					<dt><label for="username">{L_USERNAME}{L_COLON}</label></dt>
+					<dd><input class="inputbox narrow" type="text" name="username" id="username" size="25" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="email">{L_EMAIL_ADDRESS}{L_COLON}</label><br /><span>{L_EMAIL_REMIND}</span></dt>
+					<dd><input class="inputbox narrow" type="email" name="email" id="email" size="25" maxlength="100" /></dd>
+				</dl>
+				<dl>
+					<dt>&nbsp;</dt>
+					<dd>{S_HIDDEN_FIELDS}<input type="submit" name="submit" id="submit" class="button1" value="{L_SUBMIT}" tabindex="2" />&nbsp; <input type="reset" value="{L_RESET}" name="reset" class="button2" /></dd>
+				</dl>
+				{S_FORM_TOKEN}
+				</fieldset>
+			</div>
+
+			</div>
+		</div>
+		</form>
+
+	</div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

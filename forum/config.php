@@ -3,7 +3,7 @@
 // Do not change anything in this file!
 $dbms = 'phpbb\\db\\driver\\mysqli';
 $dbhost = 'localhost';
-$dbport = '3306';
+$dbport = '8889';
 $dbname = 'ghost-soldier-airsoft';
 $dbuser = 'root';
 $dbpasswd = 'root';

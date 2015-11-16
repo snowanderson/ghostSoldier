@@ -25,6 +25,12 @@ $body-font-color : $fifth-color;
 $header-font-color: $fifth-color;
 $body-font-family: "Electrolize";
 
+.content {
+  background: url("../images/grid.png")center fixed;
+  background-color: $first-color;
+
+  }
+
 // Content
 
   .content {
@@ -45,7 +51,7 @@ $panel-bg: $fourth-color;
 // Footer
 
 @import "compass/layout/sticky-footer";
-@include sticky-footer(500px);
+@include sticky-footer(100px);
 #footer {
   background: $fourth-color;
   }

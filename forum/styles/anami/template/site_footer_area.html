@@ -1,0 +1,101 @@
+<div id="site-footer-area">
+	<div class="chunk">
+
+		<!-- EVENT index_body_stat_blocks_before -->
+
+		<!-- IF not ANAMI_TCP -->
+			<!-- IF S_DISPLAY_ONLINE_LIST -->
+				<div class="grid-3">
+					<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+					<p>
+						<!-- EVENT index_body_block_online_prepend -->
+						{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
+						<!-- IF LEGEND --><br />{L_LEGEND}{L_COLON} {LEGEND}<!-- ENDIF -->
+						<!-- EVENT index_body_block_online_append -->
+					</p>
+				</div>
+			<!-- ENDIF -->
+
+			<!-- IF S_DISPLAY_BIRTHDAY_LIST and .birthdays -->
+				<div class="grid-3">
+					<h3>{L_BIRTHDAYS}</h3>
+					<p>
+						<!-- EVENT index_body_block_birthday_prepend -->
+						<!-- IF .birthdays -->{L_CONGRATULATIONS}{L_COLON} <strong><!-- BEGIN birthdays -->{birthdays.USERNAME}<!-- IF birthdays.AGE !== '' --> ({birthdays.AGE})<!-- ENDIF --><!-- IF not birthdays.S_LAST_ROW -->, <!-- ENDIF --><!-- END birthdays --></strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+						<!-- EVENT index_body_block_birthday_append -->
+					</p>
+				</div>
+			<!-- ENDIF -->
+
+			<!-- EVENT index_body_stat_blocks_after -->
+
+			<div class="grid-3">
+				<h5>About us</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /><br />Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="grid-3">
+				<h5>You Must Know</h5>
+				<ul>
+					<li>
+						<a href="#">Our Rules</a>
+					</li>
+					<li>
+						<a href="#">Frequently Asked Questions</a>
+					</li>
+					<li>
+						<a href="#">BBCode example</a>
+					</li>
+					<li>
+						<a href="#">Lorem ipsum</a>
+					</li>
+					<li>
+						<a href="#">Welcome to phpBB3</a>
+					</li>
+				</ul>
+			</div>
+
+		<!-- ELSE -->
+
+			<!-- IF S_DISPLAY_ONLINE_LIST -->
+				<div<!-- IF ANAMI_FOOTER --> class="grid-3"<!-- ENDIF -->>
+					<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+					<p>
+						<!-- EVENT index_body_block_online_prepend -->
+						{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
+						<!-- IF LEGEND --><br />{L_LEGEND}{L_COLON} {LEGEND}<!-- ENDIF -->
+						<!-- EVENT index_body_block_online_append -->
+					</p>
+				</div>
+			<!-- ENDIF -->
+
+			<!-- IF ANAMI_FOOTER -->
+				<!-- BEGIN fubl -->
+					<div class="grid-3">
+						<h5>{fubl.FOOTER_NAME}</h5>
+						{fubl.FOOTER_CONTENT}
+					</div>
+				<!-- END fubl -->
+			<!-- ENDIF -->
+
+		<!-- ENDIF -->
+
+	</div>
+
+	<div class="chunk">
+
+		<!-- IF NEWEST_USER -->
+			<div class="statistics-list">
+				<h3>{L_STATISTICS}</h3>
+				<div>
+					<!-- EVENT index_body_block_stats_prepend -->
+					<div><span>{TOTAL_POSTS}</span></div>
+					<div><span>{TOTAL_TOPICS}</span></div>
+					<div><span>{TOTAL_USERS}</span></div>
+					<div><span>{NEWEST_USER}</span></div>
+					<!-- EVENT index_body_block_stats_append -->
+				</div>
+			</div>
+		<!-- ENDIF -->
+
+	</div>
+</div>

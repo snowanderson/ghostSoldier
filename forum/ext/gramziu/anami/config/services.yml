@@ -1,0 +1,19 @@
+imports:
+    - { resource: tables.yml }
+
+services:
+    gramziu.anami.listener:
+        class: gramziu\anami\event\listener
+        arguments:
+            - @template
+            - @config
+            - @dbal.conn
+            - @request
+            - %core.root_path%
+            - %core.php_ext%
+            - %tables.anami_sidebar_table%
+            - %tables.anami_footer_table%
+            - %tables.anami_social_table%
+            - %tables.anami_menu_table%
+        tags:
+            - { name: event.listener }

@@ -1,0 +1,37 @@
+<!-- INCLUDE overall_header.html -->
+
+<div id="wrap-body">
+	<div class="chunk-main">
+
+		<!-- IF not ANAMI_TCP -->
+			<!-- INCLUDE site_sidebar.html -->
+		<!-- ELSEIF ANAMI_SIDEBAR -->
+			<div id="sidebar">
+				<!-- BEGIN siba -->
+					<div class="side-block">
+						<h4 class="side-block-head">{siba.SIDEBAR_NAME}</h4>
+						<div class="side-block-body">{siba.SIDEBAR_CONTENT}</div>
+					</div>
+				<!-- END siba -->
+			</div>
+		<!-- ENDIF -->
+
+		<div id="forumlist">
+
+			<div id="forumlist-inner">
+
+				<!-- INCLUDE forumlist_body.html -->
+
+				<!-- EVENT index_body_forumlist_body_after -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- INCLUDE site_footer_area.html -->
+
+</div>
+
+<!-- INCLUDE overall_footer.html -->

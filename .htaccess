@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
+DirectoryIndex aboutus.php index.php index.htm index.html
 
 #
 # Uncomment the statement below if you want to make use of

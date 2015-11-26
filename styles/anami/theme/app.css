@@ -1,0 +1,51 @@
+body {
+    background-color: #232425 !important;
+    }
+
+#site-nav {
+    background-color: #232425 !important;
+    }
+
+#wrap-subhead {
+    background-color: #232425 !important;
+    border: none;
+    }
+
+#site-nav a, #site-nav i {
+    color: #e9eaec !important;
+    }
+
+.display-options label, .display-options a, .display-options input {
+    color: #e9eaec !important;
+    }
+
+.display-options {
+    border: none;
+    }
+
+.pagination, .pagination a {
+    color: #e9eaec !important;
+
+    }
+
+#jumpbox span, .jumpbox-return a {
+    color: #e9eaec !important;
+    }
+
+#jumpbox span {
+    background-color: #e58731 !important;
+    }
+
+.button{
+    background-color: #e8212e !important;
+    }
+
+.button i {
+    color: #e9eaec !important;
+    }
+
+h2 a{
+    color: #e9eaec !important;
+    text-shadow: 0px 0px 5px red;
+    }
+
